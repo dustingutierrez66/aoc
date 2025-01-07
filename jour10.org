@@ -1,5 +1,5 @@
 
---- Jour 10 : Ciel ---
+* --- Jour 10 : Ciel ---
 
 Vous arrivez tous à une installation de production de lave sur une île flottante dans le ciel. Alors que les autres commencent à fouiller le complexe industriel massif, vous sentez un petit nez vous emphasez et regardez vers le bas pour découvrir un renne portant un chapeau dur.
 
@@ -67,7 +67,8 @@ Cet exemple plus grand a 9 points de vue. Compte tenu des points de vue en lectu
 
 Le renne transporte avec joie un protracteur et l'ajoute au tas. Quelle est la somme des scores de tous les points de vue sur votre carte topographique ?
 
-Votre réponse de puzzle a été 644.
+Votre réponse de puzzle a été *644*.
+
 --- Deuxième partie ---
 
 Le renne passe quelques minutes à revoir votre carte de sentier de randonnée avant de réaliser quelque chose, disparaître pendant quelques minutes, et enfin revenir avec un autre morceau de papier légèrement effilé.
@@ -126,12 +127,6 @@ Compte tenu de ses points de départ dans l'ordre de la lecture, ils ont des not
 
 Vous n'êtes pas sûr de comment, mais le renne semble avoir créé des petits drapeaux à partir de cure-dents et de morceaux de papier et les utilise pour marquer les traces sur votre carte topographique. Quelle est la somme des notes de tous les points de départ?
 
-Votre réponse de puzzle a été 1366.
+Votre réponse de puzzle a été *1366*.
 
-Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
-
-À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
-
-Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
-
-Vous pouvez aussi [Partager sur Bluesky Twitter Mastodon, cette énigme.
+Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or
