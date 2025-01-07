@@ -1,5 +1,5 @@
 
---- Jour 1: Hystérie historien ---
+* --- Jour 1: Hystérie historien ---
 
 L'Historien en chef est toujours présent pour le grand sleigh, mais personne ne l'a vu depuis des mois. Dernier jour, il se rendait dans des endroits qui sont historiquement importants pour le pôle Nord; un groupe d'historiens aînés vous a demandé de les accompagner en vérétant les endroits où ils pensent qu'il était le plus susceptible de visiter.
 
@@ -41,7 +41,8 @@ Pour trouver le distance totale entre la liste de gauche et la liste de droite, 
 
 Vos listes de gauche et de droite réelles contiennent de nombreux identifiants de localisation. Quelle est la distance totale entre vos listes ?
 
-Votre réponse de puzzle a été 2192892.
+Votre réponse de puzzle a été *2192892*.
+
 --- Deuxième partie ---
 
 Votre analyse n'a confirmé que ce que tout le monde craignait: les deux listes d'identifications de localisation sont en effet très différentes.
@@ -74,12 +75,7 @@ Donc, pour ces exemples de listes, le score de similarité à la fin de ce proce
 
 Considérez à nouveau vos listes gauche et droite. Quel est leur score de similarité?
 
-Votre réponse de puzzle a été 22962826.
+Votre réponse de puzzle a été *22962826*.
 
 Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
 
-À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
-
-Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
-
-Vous pouvez aussi [Partager sur Bluesky Twitter Mastodon, cette énigme.
