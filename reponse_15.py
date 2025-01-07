@@ -2,7 +2,7 @@ import os
 
 def get_data():
     cwd = os.getcwd()
-    with open(cwd + '/Jour_15_input.txt', 'r') as file:
+    with open(cwd + '/day15.txt', 'r') as file:
         data = file.read().strip()
     s1, s2 = data.split("\n\n")
     return s1, s2
