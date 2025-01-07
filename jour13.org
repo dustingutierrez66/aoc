@@ -1,17 +1,16 @@
+* --- Jour 13 : Contraption des griffes ---
 
---- Day 13: Claw Contraption ---
+Ensuite, le hall d'un complexe sur une île tropicale. Les Historiens prennent un moment pour admirer les carreaux hexagonaux avant de s'étendre.
 
-Next up: the lobby of a resort on a tropical island. The Historians take a moment to admire the hexagonal floor tiles before spreading out.
+Heureusement, on dirait que la station balnéaire a un nouvel arcade. Peut-être pouvez-vous gagner des prix des machines à griffer ?
 
-Fortunately, it looks like the resort has a new arcade! Maybe you can win some prizes from the claw machines?
+Les machines à griffes ici sont un peu inhabituelles. Au lieu d'un joystick ou de boutons directionnels pour contrôler la griffe, ces machines ont deux boutons étiquetés A et B. Pire, vous ne pouvez pas simplement mettre un jeton et jouer; ça coûte 3 jetons pour pousser le A bouton et bouton et 1 jeton pour pousser le B bouton.
 
-The claw machines here are a little unusual. Instead of a joystick or directional buttons to control the claw, these machines have two buttons labeled A and B. Worse, you can't just put in a token and play; it costs 3 tokens to push the A button and 1 token to push the B button.
+Avec un peu d'expérimentation, vous comprenez que les boutons de chaque machine sont configurés pour déplacer la griffe d'un montant spécifique à la droit (le long de la X axe) et un montant spécifique à l'avance (le long de la Y axe) chaque fois que l'on appuie sur le bouton.
 
-With a little experimentation, you figure out that each machine's buttons are configured to move the claw a specific amount to the right (along the X axis) and a specific amount forward (along the Y axis) each time that button is pressed.
+Chaque machine en contient une Prix; pour remporter le prix, la griffe doit être positionnée Exactement exactement ci-dessus du prix à la fois X et Y axes.
 
-Each machine contains one prize; to win the prize, the claw must be positioned exactly above the prize on both the X and Y axes.
-
-You wonder: what is the smallest number of tokens you would have to spend to win as many prizes as possible? You assemble a list of every machine's button behavior and prize location (your puzzle input). For example:
+Vous vous demandez : quel est le plus petit nombre de jetons que vous auriez à dépenser pour gagner autant de prix que possible ? Vous assemblez une liste du comportement du bouton de chaque machine et de l'emplacement du prix (votre entrée de puzzle). Par exemple:
 
 Button A: X+94, Y+34
 Button B: X+22, Y+67
@@ -29,32 +28,33 @@ Button A: X+69, Y+23
 Button B: X+27, Y+71
 Prize: X=18641, Y=10279
 
-This list describes the button configuration and prize location of four different claw machines.
+Cette liste décrit la configuration des boutons et l'emplacement du prix de quatre machines à griffes différentes.
 
-For now, consider just the first claw machine in the list:
+Pour l'instant, considérez simplement la première machine à griffes de la liste:
 
-    Pushing the machine's A button would move the claw 94 units along the X axis and 34 units along the Y axis.
-    Pushing the B button would move the claw 22 units along the X axis and 67 units along the Y axis.
-    The prize is located at X=8400, Y=5400; this means that from the claw's initial position, it would need to move exactly 8400 units along the X axis and exactly 5400 units along the Y axis to be perfectly aligned with the prize in this machine.
+    Pousser la machine A Bouton déplacerait la griffe 94 les unités le long de la X axe et 34 les unités le long de la Y axe.
+    Pousser le B Bouton déplacerait la griffe 22 les unités le long de la X axe et 67 les unités le long de la Y axe.
+    Le prix est situé à l'adresse X=8400, Y=5400; cela signifie qu'à partir de la position initiale de la griffe, il faudrait qu'il se déplace exactement 8400 les unités le long de la X axe et exactement 5400 les unités le long de la Y axe à être parfaitement aligné avec le prix dans cette machine.
 
-The cheapest way to win the prize is by pushing the A button 80 times and the B button 40 times. This would line up the claw along the X axis (because 80*94 + 40*22 = 8400) and along the Y axis (because 80*34 + 40*67 = 5400). Doing this would cost 80*3 tokens for the A presses and 40*1 for the B presses, a total of 280 tokens.
+Le moyen le moins cher de gagner le prix est de pousser le A bouton 80 et les temps et les B bouton 40 fois. Cela alignerait la griffe le long de la X axe (carré 80*94 + 40*22 = 8400) et le long de la Y axe (carré 80*34 + 40*67 = 5400). Faire cela coûterait cher 80*3 des jetons pour le APresses et 40*1 pour la B presses, un total de 280 jetons.
 
-For the second and fourth claw machines, there is no combination of A and B presses that will ever win a prize.
+Pour les deuxième et quatrième machines à griffes, il n'y a pas de combinaison de presses A et B qui remportera un prix.
 
-For the third claw machine, the cheapest way to win the prize is by pushing the A button 38 times and the B button 86 times. Doing this would cost a total of 200 tokens.
+Pour la troisième machine à griffes, le moyen le moins cher de gagner le prix est de pousser le A bouton 38 et les temps et les B bouton 86 fois. Cela coûterait un total de 200 jetons.
 
-So, the most prizes you could possibly win is two; the minimum tokens you would have to spend to win all (two) prizes is 480.
+Donc, le plus grand nombre de prix que vous pourriez gagner est deux; les jetons minimum que vous auriez à dépenser pour gagner tous les (deux) prix est 480.
 
-You estimate that each button would need to be pressed no more than 100 times to win a prize. How else would someone be expected to play?
+Vous estimez que chaque bouton ne devrait pas être pressé plus que fois de gagner un prix. Comment on s'attendait à ce que quelqu'un joue ?
 
-Figure out how to win as many prizes as possible. What is the fewest tokens you would have to spend to win all possible prizes?
+Découvrez comment gagner autant de prix que possible. Quels sont les quelques-uns que vous auriez à dépenser pour gagner tous les prix possibles?
 
-Your puzzle answer was 34393.
---- Part Two ---
+Votre réponse de puzzle a été *34393*.
 
-As you go to win the first prize, you discover that the claw is nowhere near where you expected it would be. Due to a unit conversion error in your measurements, the position of every prize is actually 10000000000000 higher on both the X and Y axis!
+--- Deuxième partie ---
 
-Add 10000000000000 to the X and Y position of every prize. After making this change, the example above would now look like this:
+Au fur et à mesure que vous gagnez le premier prix, vous découvrez que la griffe est nulle part proche de l'endroit où vous vous attendiez. En raison d'une erreur de conversion unitaire dans vos mesures, la position de chaque prix est en fait 10000000000000 plus élevé sur les deux X et Y axe
+
+Ajouter 10000000000000 à la X et Y position de chaque prix. Après avoir apporté ce changement, l'exemple ci-dessus ressemblerait maintenant à ceci :
 
 Button A: X+94, Y+34
 Button B: X+22, Y+67
@@ -72,17 +72,16 @@ Button A: X+69, Y+23
 Button B: X+27, Y+71
 Prize: X=10000000018641, Y=10000000010279
 
-Now, it is only possible to win a prize on the second and fourth claw machines. Unfortunately, it will take many more than 100 presses to do so.
+Or, il n'est possible de gagner qu'un prix sur les deuxième et quatrième machines à griffes. Malheureusement, il faudra beaucoup plus que 100pression pour le faire.
 
-Using the corrected prize coordinates, figure out how to win as many prizes as possible. What is the fewest tokens you would have to spend to win all possible prizes?
+En utilisant les coordonnées du prix corrigée, trouver comment gagner autant de prix que possible. Quels sont les quelques-uns que vous auriez à dépenser pour gagner tous les prix possibles?
 
-Your puzzle answer was 83551068361379.
+Votre réponse de puzzle a été *83551068361379*.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
 
-At this point, you should return to your Advent calendar and try another puzzle.
+À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
 
-If you still want to see it, you can get your puzzle input.
+Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
 
-You can also [Shareon Bluesky Twitter Mastodon] this puzzle.
-
+Vous pouvez aussi 
