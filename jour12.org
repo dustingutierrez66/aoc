@@ -1,5 +1,5 @@
 
---- Jour 12 : Groupes de jardin ---
+* --- Jour 12 : Groupes de jardin ---
 
 Pourquoi ne pas chercher l'historien en chef près du jardinier et de sa vaste ferme ? Il y a beaucoup de nourriture, alors les Historiens attrapent quelque chose à manger pendant qu'ils fouillent.
 
@@ -85,7 +85,8 @@ Donc, il a un prix total de 1930.
 
 Quel est le prix total de la clôture dans toutes les régions de votre carte?
 
-Votre réponse de puzzle a été 1549354.
+Votre réponse de puzzle a été *1549354*.
+
 --- Deuxième partie ---
 
 Heureusement, les Elfes essaient de commander tellement de clôtures qu'ils ont droit à une remise en gros.
@@ -144,12 +145,6 @@ En les additionnant ensemble, il produit son nouveau prix total de 1206.
 
 Quel est le nouveau prix total de la clôture de toutes les régions sur votre carte?
 
-Votre réponse de puzzle a été 937032.
+Votre réponse de puzzle a été *937032*.
 
 Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
-
-À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
-
-Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
-
-Vous pouvez aussi [Partager sur Bluesky Twitter Mastodon, cette énigme.
