@@ -1,17 +1,16 @@
+* --- Jour 5 : File d'information ---
 
---- Day 5: Print Queue ---
+Satisfaite de leur recherche sur Ceres, l'escadron de savants suggère par la suite de balayer les piles de papeterie du sous-sous-sous-base 17.
 
-Satisfied with their search on Ceres, the squadron of scholars suggests subsequently scanning the stationery stacks of sub-basement 17.
+Le département d'impression du pôle Nord est plus fréquent que jamais, à proximité des fêtes de fin d'année, et tandis que les Historiens continuent leur recherche dans cette installation historiquement importante, un Elfe qui exploite une imprimante très familière vous prévaudait.
 
-The North Pole printing department is busier than ever this close to Christmas, and while The Historians continue their search of this historically significant facility, an Elf operating a very familiar printer beckons you over.
+L'Elf doit vous reconnaître, parce qu'ils ne perdent pas de temps à expliquer que les nouvelles mises à jour du manuel de sécurité du lancement du chariot ne seront pas imprimées correctement. Ne pas mettre à jour les manuels de sécurité serait terrible en effet, vous offrez donc vos services.
 
-The Elf must recognize you, because they waste no time explaining that the new sleigh launch safety manual updates won't print correctly. Failure to update the safety manuals would be dire indeed, so you offer your services.
+Les protocoles de sécurité indiquent clairement que les nouvelles pages pour les manuels de sécurité doivent être imprimées dans un ordre très spécifique. La notation X|Y signifie que si les deux numéros de page X et numéro de page Y doivent être produites dans le cadre d'une mise à jour, numéro de page X doit être imprimé à un moment donné avant le numéro de page Y.
 
-Safety protocols clearly indicate that new pages for the safety manuals must be printed in a very specific order. The notation X|Y means that if both page number X and page number Y are to be produced as part of an update, page number X must be printed at some point before page number Y.
+L'Elf a pour vous à la fois les règles d'ordre de page et les pages à produire dans chaque mise à jour (votre saisie de puzzle), mais ne peut pas déterminer si chaque mise à jour a les pages dans le bon ordre.
 
-The Elf has for you both the page ordering rules and the pages to produce in each update (your puzzle input), but can't figure out whether each update has the pages in the right order.
-
-For example:
+Par exemple:
 
 47|53
 97|13
@@ -42,64 +41,63 @@ For example:
 61,13,29
 97,13,75,29,47
 
-The first section specifies the page ordering rules, one per line. The first rule, 47|53, means that if an update includes both page number 47 and page number 53, then page number 47 must be printed at some point before page number 53. (47 doesn't necessarily need to be immediately before 53; other pages are allowed to be between them.)
+La première section précise la Règles de commande de page, un par ligne. La première règle, 47|53, signifie que si une mise à jour inclut à la fois la page numéro 47 et la page numéro 53, alors le numéro de page 47 doit être imprimés à un moment ou à un autre avant le numéro de page 53. (47 n'a pas nécessairement besoin d'être immédiatement avant 53; les autres pages sont autorisées à être entre elles.)
 
-The second section specifies the page numbers of each update. Because most safety manuals are different, the pages needed in the updates are different too. The first update, 75,47,61,53,29, means that the update consists of page numbers 75, 47, 61, 53, and 29.
+La deuxième section précise les numéros de page de chaque mise à jour. Étant donné que la plupart des manuels de sécurité sont différents, les pages nécessaires dans les mises à jour sont également différentes. La première mise à jour, 75,47,61,53,29, signifie que la mise à jour se compose des pages des numéros 75, 47, 61, 53 et 29.
 
-To get the printers going as soon as possible, start by identifying which updates are already in the right order.
+Pour faire démarrer les imprimantes dès que possible, commencez par identifier les mises à jour qui sont déjà dans le bon ordre.
 
-In the above example, the first update (75,47,61,53,29) is in the right order:
+Dans l'exemple ci-dessus, la première mise à jour (75,47,61,53,29) est dans le bon ordre:
 
-    75 is correctly first because there are rules that put each other page after it: 75|47, 75|61, 75|53, and 75|29.
-    47 is correctly second because 75 must be before it (75|47) and every other page must be after it according to 47|61, 47|53, and 47|29.
-    61 is correctly in the middle because 75 and 47 are before it (75|61 and 47|61) and 53 and 29 are after it (61|53 and 61|29).
-    53 is correctly fourth because it is before page number 29 (53|29).
-    29 is the only page left and so is correctly last.
+    75 est d'abord correct parce qu'il y a des règles qui se mettent une page après l'autre: 75|47, 75|61, 75|53, et 75|29.
+    47 est à peine seconde parce que 75 doit être avant elle (75|47) et toutes les autres pages doivent être après elle conformément à 47|61, 47|53, et 47|29.
+    61 est correctement au milieu car 75 et 47 sont avant lui (75|61 et 47|61) et 53 et 29 sont après elle (61|53 et 61|29).
+    53 est à juste titre de la quatrième parce qu'il est avant la page numéro 29 (53|29).
+    29 est la seule page restante et donc est donc en fin de compte.
 
-Because the first update does not include some page numbers, the ordering rules involving those missing page numbers are ignored.
+Étant donné que la première mise à jour n'inclut pas certains numéros de page, les règles d'ordre impliquant les numéros de page manquants sont ignorées.
 
-The second and third updates are also in the correct order according to the rules. Like the first update, they also do not include every page number, and so only some of the ordering rules apply - within each update, the ordering rules that involve missing page numbers are not used.
+Les deuxième et troisième mises à jour sont également dans le bon ordre selon les règles. Comme la première mise à jour, elles n'incluent pas non plus tous les numéros de page, et donc seules certaines des règles de commande s'appliquent - dans chaque mise à jour, les règles d'ordonnancement qui impliquent des numéros de page manquants ne sont pas utilisées.
 
-The fourth update, 75,97,47,61,53, is not in the correct order: it would print 75 before 97, which violates the rule 97|75.
+La quatrième mise à jour, 75,97,47,61,53, est-il non dans l'ordre correct: il imprimerait 75 avant 97, ce qui viole la règle 97|75.
 
-The fifth update, 61,13,29, is also not in the correct order, since it breaks the rule 29|13.
+La cinquième mise à jour, 61,13,29, est-il aussi non dans le bon ordre, puisqu'il enfreint la règle 29|13.
 
-The last update, 97,13,75,29,47, is not in the correct order due to breaking several rules.
+La dernière mise à jour, 97,13,75,29,47, est-il non dans l'ordre correct dû à l'enfreindre plusieurs règles.
 
-For some reason, the Elves also need to know the middle page number of each update being printed. Because you are currently only printing the correctly-ordered updates, you will need to find the middle page number of each correctly-ordered update. In the above example, the correctly-ordered updates are:
+Pour une raison quelconque, les Elfes ont également besoin de connaître le numéro de page intermédiaire de chaque mise à jour en cours d'impression. Étant donné que vous n'imprimez actuellement que les mises à jour correctement ordonnées, vous aurez besoin de trouver le numéro de page du milieu de chaque mise à jour correctement ordonnée. Dans l'exemple ci-dessus, les mises à jour correctement ordonnées sont:
 
 75,47,61,53,29
 97,61,53,29,13
 75,29,13
 
-These have middle page numbers of 61, 53, and 29 respectively. Adding these page numbers together gives 143.
+Ceux-ci ont des numéros de page du milieu de 61, 53, et 29 respectivement. L'ajout de ces numéros de page ensemble donne 143.
 
-Of course, you'll need to be careful: the actual list of page ordering rules is bigger and more complicated than the above example.
+Bien sûr, vous aurez besoin d'être prudent: la liste réelle des règles de commande de page est plus grande et plus compliquée que l'exemple ci-dessus.
 
-Determine which updates are already in the correct order. What do you get if you add up the middle page number from those correctly-ordered updates?
+Déterminer quelles mises à jour sont déjà dans l'ordre correct. Qu'obtenez-vous si vous additionnez le numéro de page du milieu à partir de ces mises à jour correctement ordonnées ?
 
-Your puzzle answer was 5248.
---- Part Two ---
+Votre réponse de puzzle a été *5248*.
+--- Deuxième partie ---
 
-While the Elves get to work printing the correctly-ordered updates, you have a little time to fix the rest of them.
+Alors que les Elfes travaillent à imprimer les mises à jour correctement ordonnées, vous avez un peu de temps pour réparer le reste d'entre eux.
 
-For each of the incorrectly-ordered updates, use the page ordering rules to put the page numbers in the right order. For the above example, here are the three incorrectly-ordered updates and their correct orderings:
+Pour chacune des mises à jour mal ordonnées, utilisez les règles de commande de page pour mettre les numéros de page dans le bon ordre. Pour l'exemple ci-dessus, voici les trois mises à jour mal ordonnées et leurs commandes correctes:
 
-    75,97,47,61,53 becomes 97,75,47,61,53.
-    61,13,29 becomes 61,29,13.
-    97,13,75,29,47 becomes 97,75,47,29,13.
+    75,97,47,61,53 devient 97,75,47,61,53.
+    61,13,29 devient 61,29,13.
+    97,13,75,29,47 devient 97,75,47,29,13.
 
-After taking only the incorrectly-ordered updates and ordering them correctly, their middle page numbers are 47, 29, and 47. Adding these together produces 123.
+Après prise Seules les mises à jour mal ordonnées et en les ordonnant correctement, leurs numéros de page du milieu sont 47, 29, et 47. En les additionnant ensemble, il produit 123.
 
-Find the updates which are not in the correct order. What do you get if you add up the middle page numbers after correctly ordering just those updates?
+Trouvez les mises à jour qui ne sont pas dans le bon ordre. Qu'obtenez-vous si vous additionnez les numéros de page du milieu après avoir correctement commandé ces mises à jour ?
 
-Your puzzle answer was 4507.
+Votre réponse de puzzle a été *4507*.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
 
-At this point, you should return to your Advent calendar and try another puzzle.
+À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
 
-If you still want to see it, you can get your puzzle input.
+Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
 
-You can also [Shareon Bluesky Twitter Mastodon] this puzzle.
-
+Vous pouvez aussi 
