@@ -1,26 +1,26 @@
 
---- Day 12: Garden Groups ---
+--- Jour 12 : Groupes de jardin ---
 
-Why not search for the Chief Historian near the gardener and his massive farm? There's plenty of food, so The Historians grab something to eat while they search.
+Pourquoi ne pas chercher l'historien en chef près du jardinier et de sa vaste ferme ? Il y a beaucoup de nourriture, alors les Historiens attrapent quelque chose à manger pendant qu'ils fouillent.
 
-You're about to settle near a complex arrangement of garden plots when some Elves ask if you can lend a hand. They'd like to set up fences around each region of garden plots, but they can't figure out how much fence they need to order or how much it will cost. They hand you a map (your puzzle input) of the garden plots.
+Vous êtes sur le point de vous installer à proximité d'un arrangement complexe de parcelles de jardin quand certains Elfes vous demandent si vous pouvez prêter main forte. Ils aimeraient mettre en place des clôtures autour de chaque région de parcelles de jardin, mais ils ne peuvent pas comprendre combien de clôtures ils doivent commander ou combien cela coûtera. Ils vous donnent une carte (votre jeu d'intrigues) des parcelles de jardin.
 
-Each garden plot grows only a single type of plant and is indicated by a single letter on your map. When multiple garden plots are growing the same type of plant and are touching (horizontally or vertically), they form a region. For example:
+Chaque parcelle de jardin ne cultive qu'un seul type de plante et est indiquée par une seule lettre sur votre carte. Lorsque plusieurs parcelles de jardin cultivent le même type de plante et se touchent (horizontalement ou verticalement), elles forment une région. Par exemple:
 
 AAAA
 BBCD
 BBCC
 EEEC
 
-This 4x4 arrangement includes garden plots growing five different types of plants (labeled A, B, C, D, and E), each grouped into their own region.
+Cet arrangement 4x4 comprend des parcelles de jardin cultivant cinq types de plantes différentes (marquées A, B, C, D, et E), chacun groupé dans sa propre région.
 
-In order to accurately calculate the cost of the fence around a single region, you need to know that region's area and perimeter.
+Afin de calculer avec précision le coût de la clôture autour d'une même région, il faut connaître la zone et le périmètre de cette région.
 
-The area of a region is simply the number of garden plots the region contains. The above map's type A, B, and C plants are each in a region of area 4. The type E plants are in a region of area 3; the type D plants are in a region of area 1.
+Le zone d'une région est simplement le nombre de parcelles de jardin que contient la région. Type de carte ci-dessus A, B, et C les plantes sont chacune dans une région de superficie 4. Le type E les plantes se trouvent dans une région 3; le type D les plantes se trouvent dans une région 1.
 
-Each garden plot is a square and so has four sides. The perimeter of a region is the number of sides of garden plots in the region that do not touch another garden plot in the same region. The type A and C plants are each in a region with perimeter 10. The type B and E plants are each in a region with perimeter 8. The lone D plot forms its own region with perimeter 4.
+Chaque parcelle de jardin est une place et il en a donc quatre côtés. Le périmètre d'une région est le nombre de côtés de parcelles de jardin dans la région qui ne touchent pas un autre jardin dans la même région. Le type A et C les plantes sont chacune dans une région à périmètre 10. Le type B et E les plantes sont chacune dans une région à périmètre 8. Le sol D une parcelle forme sa propre région avec un périmètre 4.
 
-Visually indicating the sides of plots in each region that contribute to the perimeter using - and |, the above map's regions' perimeters are measured as follows:
+Visuellement indiquant les côtés des placettes dans chaque région qui contribuent au pourtour en utilisant - et |, les périmètres des régions de la carte ci-dessus sont mesurés comme suit:
 
 +-+-+-+-+
 |A A A A|
@@ -36,7 +36,7 @@ Visually indicating the sides of plots in each region that contribute to the per
 |E E E|
 +-+-+-+
 
-Plants of the same type can appear in multiple separate regions, and regions can even appear within other regions. For example:
+Des plantes du même type peuvent apparaître dans plusieurs régions distinctes, et des régions peuvent même apparaître dans d'autres régions. Par exemple:
 
 OOOOO
 OXOXO
@@ -44,17 +44,17 @@ OOOOO
 OXOXO
 OOOOO
 
-The above map contains five regions, one containing all of the O garden plots, and the other four each containing a single X plot.
+La carte ci-dessus contient 5 les régions, dont la totalité O les parcelles de jardin, et les quatre autres contenant chacune une seule X parcelle.
 
-The four X regions each have area 1 and perimeter 4. The region containing 21 type O plants is more complicated; in addition to its outer edge contributing a perimeter of 20, its boundary with each X region contributes an additional 4 to its perimeter, for a total perimeter of 36.
+Les quatre X les régions ont chacune une superficie 1 et le périmètre 4. La région contenant 21 type O les plantes sont plus compliquées; en plus de son bord extérieur contribuant à un périmètre de 20, sa frontière avec chaque X la région apporte une contribution supplémentaire 4 à son périmètre, pour un périmètre total de 36.
 
-Due to "modern" business practices, the price of fence required for a region is found by multiplying that region's area by its perimeter. The total price of fencing all regions on a map is found by adding together the price of fence for every region on the map.
+En raison des pratiques commerciales "modernes", le prix de la clôture requise pour une région est trouvé en multipliant la zone de cette région par son périmètre. Le prix total de la clôture de toutes les régions sur une carte est trouvé en additionnant le prix de la clôture pour chaque région sur la carte.
 
-In the first example, region A has price 4 * 10 = 40, region B has price 4 * 8 = 32, region C has price 4 * 10 = 40, region D has price 1 * 4 = 4, and region E has price 3 * 8 = 24. So, the total price for the first example is 140.
+Dans le premier exemple, région A a un prix 4 * 10 = 40, région B a un prix 4 * 8 = 32, région C a un prix 4 * 10 = 40, région D a un prix 1 * 4 = 4, et la région E a un prix 3 * 8 = 24. Donc, le prix total pour le premier exemple est 140.
 
-In the second example, the region with all of the O plants has price 21 * 36 = 756, and each of the four smaller X regions has price 1 * 4 = 4, for a total price of 772 (756 + 4 + 4 + 4 + 4).
+Dans le deuxième cas, la région avec la totalité de la O les végétaux ont un prix 21 * 36 = 756, et chacun des quatre plus petits X les régions ont un prix 1 * 4 = 4, pour un prix total de 772 (756 + 4 + 4 + 4 + 4).
 
-Here's a larger example:
+Voici un plus grand exemple :
 
 RRRRIICCFF
 RRRRIICCCF
@@ -67,45 +67,45 @@ MIIIIIJJEE
 MIIISIJEEE
 MMMISSJEEE
 
-It contains:
+Il contient :
 
-    A region of R plants with price 12 * 18 = 216.
-    A region of I plants with price 4 * 8 = 32.
-    A region of C plants with price 14 * 28 = 392.
-    A region of F plants with price 10 * 18 = 180.
-    A region of V plants with price 13 * 20 = 260.
-    A region of J plants with price 11 * 20 = 220.
-    A region of C plants with price 1 * 4 = 4.
-    A region of E plants with price 13 * 18 = 234.
-    A region of I plants with price 14 * 22 = 308.
-    A region of M plants with price 5 * 12 = 60.
-    A region of S plants with price 3 * 8 = 24.
+    Une région de R plantes à prix 12 * 18 = 216.
+    Une région de I plantes à prix 4 * 8 = 32.
+    Une région de C plantes à prix 14 * 28 = 392.
+    Une région de F plantes à prix 10 * 18 = 180.
+    Une région de V plantes à prix 13 * 20 = 260.
+    Une région de J plantes à prix 11 * 20 = 220.
+    Une région de C plantes à prix 1 * 4 = 4.
+    Une région de E plantes à prix 13 * 18 = 234.
+    Une région de I plantes à prix 14 * 22 = 308.
+    Une région de M plantes à prix 5 * 12 = 60.
+    Une région de S plantes à prix 3 * 8 = 24.
 
-So, it has a total price of 1930.
+Donc, il a un prix total de 1930.
 
-What is the total price of fencing all regions on your map?
+Quel est le prix total de la clôture dans toutes les régions de votre carte?
 
-Your puzzle answer was 1549354.
---- Part Two ---
+Votre réponse de puzzle a été 1549354.
+--- Deuxième partie ---
 
-Fortunately, the Elves are trying to order so much fence that they qualify for a bulk discount!
+Heureusement, les Elfes essaient de commander tellement de clôtures qu'ils ont droit à une remise en gros.
 
-Under the bulk discount, instead of using the perimeter to calculate the price, you need to use the number of sides each region has. Each straight section of fence counts as a side, regardless of how long it is.
+Sous la réduction de gros, au lieu d'utiliser le périmètre pour calculer le prix, vous devez utiliser le nombre de côtés que chaque région a. Chaque section droite de clôture compte comme un côté, quelle que soit sa durée.
 
-Consider this example again:
+Réexaminer cet exemple à nouveau:
 
 AAAA
 BBCD
 BBCC
 EEEC
 
-The region containing type A plants has 4 sides, as does each of the regions containing plants of type B, D, and E. However, the more complex region containing the plants of type C has 8 sides!
+La région contenant le type A les plantes ont 4 côtés, de même que chacune des régions contenant des plantes de type B, D, et E. Toutefois, la région plus complexe contenant les plantes de type C a 8 les parties:
 
-Using the new method of calculating the per-region price by multiplying the region's area by its number of sides, regions A through E have prices 16, 16, 32, 4, and 12, respectively, for a total price of 80.
+En utilisant la nouvelle méthode de calcul du prix par région en multipliant la zone de la région par son nombre de côtés, A par E avoir des prix 16, 16, 32, 4, et 12, respectivement, pour un prix total de 80.
 
-The second example above (full of type X and O plants) would have a total price of 436.
+Le deuxième example ci-dessus (plein de type X et O ) aurait un prix total de 436.
 
-Here's a map that includes an E-shaped region full of type E plants:
+Voici une carte qui comprend une région en forme de E pleine de type E plantes:
 
 EEEEE
 EXXXX
@@ -113,9 +113,9 @@ EEEEE
 EXXXX
 EEEEE
 
-The E-shaped region has an area of 17 and 12 sides for a price of 204. Including the two regions full of type X plants, this map has a total price of 236.
+La région en forme de E a une superficie de 17 et 12 pour un prix de 204. Y compris les deux régions pleines de type X plantes, cette carte a un prix total de 236.
 
-This map has a total price of 368:
+Cette carte a un prix total de 368:
 
 AAAAAA
 AAABBA
@@ -124,33 +124,32 @@ ABBAAA
 ABBAAA
 AAAAAA
 
-It includes two regions full of type B plants (each with 4 sides) and a single region full of type A plants (with 4 sides on the outside and 8 more sides on the inside, a total of 12 sides). Be especially careful when counting the fence around regions like the one full of type A plants; in particular, each section of fence has an in-side and an out-side, so the fence does not connect across the middle of the region (where the two B regions touch diagonally). (The Elves would have used the Möbius Fencing Company instead, but their contract terms were too one-sided.)
+Il comprend deux régions pleines de type B plantes (chacun avec 4 côtés) et une seule région pleine de type A plantes (avec 4 de côté à l'extérieur et 8 plus de côtés à l'intérieur, un total de 12 les côtés). Soyez particulièrement prudent lorsque vous comptez la clôture autour de régions comme celle pleine de type A plantes; en particulier, chaque section de clôture a un côté et une face à l'extérieur, de sorte que la clôture ne se connecte pas à travers le milieu de la région (où les deux B les régions se touchent en diagonale). (Les Elfes auraient utilisé la société d'escrime M'bius à la place, mais leurs clauses contractuelles étaient trop partiales.)
 
-The larger example from before now has the following updated prices:
+Le plus grand exemple d'avant-prix est la mise à jour suivante:
 
-    A region of R plants with price 12 * 10 = 120.
-    A region of I plants with price 4 * 4 = 16.
-    A region of C plants with price 14 * 22 = 308.
-    A region of F plants with price 10 * 12 = 120.
-    A region of V plants with price 13 * 10 = 130.
-    A region of J plants with price 11 * 12 = 132.
-    A region of C plants with price 1 * 4 = 4.
-    A region of E plants with price 13 * 8 = 104.
-    A region of I plants with price 14 * 16 = 224.
-    A region of M plants with price 5 * 6 = 30.
-    A region of S plants with price 3 * 6 = 18.
+    Une région de R plantes à prix 12 * 10 = 120.
+    Une région de I plantes à prix 4 * 4 = 16.
+    Une région de C plantes à prix 14 * 22 = 308.
+    Une région de F plantes à prix 10 * 12 = 120.
+    Une région de V plantes à prix 13 * 10 = 130.
+    Une région de J plantes à prix 11 * 12 = 132.
+    Une région de C plantes à prix 1 * 4 = 4.
+    Une région de E plantes à prix 13 * 8 = 104.
+    Une région de I plantes à prix 14 * 16 = 224.
+    Une région de M plantes à prix 5 * 6 = 30.
+    Une région de S plantes à prix 3 * 6 = 18.
 
-Adding these together produces its new total price of 1206.
+En les additionnant ensemble, il produit son nouveau prix total de 1206.
 
-What is the new total price of fencing all regions on your map?
+Quel est le nouveau prix total de la clôture de toutes les régions sur votre carte?
 
-Your puzzle answer was 937032.
+Votre réponse de puzzle a été 937032.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
 
-At this point, you should return to your Advent calendar and try another puzzle.
+À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
 
-If you still want to see it, you can get your puzzle input.
+Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
 
-You can also [Shareon Bluesky Twitter Mastodon] this puzzle.
-
+Vous pouvez aussi [Partager sur Bluesky Twitter Mastodon, cette énigme.
