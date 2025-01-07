@@ -1,35 +1,35 @@
 
---- Day 11: Plutonian Pebbles ---
+--- Jour 11 : Plutoniens Pebbles ---
 
-The ancient civilization on Pluto was known for its ability to manipulate spacetime, and while The Historians explore their infinite corridors, you've noticed a strange set of physics-defying stones.
+L'ancienne civilisation de Pluton était connue pour sa capacité à manipuler l'espace-temps, et tandis que les Historiens explorent leurs couloirs infinis, vous avez remarqué un étrange ensemble de pierres qui défient la physique.
 
-At first glance, they seem like normal stones: they're arranged in a perfectly straight line, and each stone has a number engraved on it.
+À première vue, elles ressemblent à des pierres normales : elles sont disposées en une ligne parfaitement droite, et chaque pierre a un nombre gravé dessus.
 
-The strange part is that every time you blink, the stones change.
+L'étrange partie, c'est que chaque fois que vous clignez des yeux, les pierres changent.
 
-Sometimes, the number engraved on a stone changes. Other times, a stone might split in two, causing all the other stones to shift over a bit to make room in their perfectly straight line.
+Parfois, le nombre gravé sur une pierre change. D'autres fois, une pierre pourrait se fendre en deux, ce qui fait que toutes les autres pierres se déplacent un peu pour faire de la place dans leur ligne parfaitement droite.
 
-As you observe them for a while, you find that the stones have a consistent behavior. Every time you blink, the stones each simultaneously change according to the first applicable rule in this list:
+Au fur et à mesure que vous les observez pendant un certain temps, vous trouvez que les pierres ont un comportement constant. Chaque fois que vous clignez, les pierres changent chacune simultanément selon la première règle applicable dans cette liste:
 
-    If the stone is engraved with the number 0, it is replaced by a stone engraved with the number 1.
-    If the stone is engraved with a number that has an even number of digits, it is replaced by two stones. The left half of the digits are engraved on the new left stone, and the right half of the digits are engraved on the new right stone. (The new numbers don't keep extra leading zeroes: 1000 would become stones 10 and 0.)
-    If none of the other rules apply, the stone is replaced by a new stone; the old stone's number multiplied by 2024 is engraved on the new stone.
+    Si la pierre est gravée du nombre 0, il est remplacé par une pierre gravée du nombre 1.
+    Si la pierre est gravée d'un nombre qui a un même nombre de chiffres, il est remplacé par deux pierres. La moitié gauche des chiffres sont gravés sur la nouvelle pierre gauche, et la moitié droite des chiffres sont gravés sur la nouvelle pierre droite. (Les nouveaux nombres ne gardent pas les zéros de tête supplémentaires: 1000 deviendrait des pierres 10 et 0.)
+    Si aucune des autres règles ne s'applique, la pierre est remplacée par une nouvelle pierre; le nombre de la vieille pierre multiplié par 2024 est gravé sur la nouvelle pierre.
 
-No matter how the stones change, their order is preserved, and they stay on their perfectly straight line.
+Peu importe comment les pierres changent, leur ordre est préservé, et ils restent sur leur ligne parfaitement droite.
 
-How will the stones evolve if you keep blinking at them? You take a note of the number engraved on each stone in the line (your puzzle input).
+Comment les pierres évolueront-elles si vous continuez à clignoter ? Vous prenez note du nombre gravé sur chaque pierre dans la ligne (votre jeu d'intervention en jeu).
 
-If you have an arrangement of five stones engraved with the numbers 0 1 10 99 999 and you blink once, the stones transform as follows:
+Si vous avez un arrangement de cinq pierres gravées avec les numéros 0 1 10 99 999 Et vous clignez une fois, les pierres se transforment comme suit:
 
-    The first stone, 0, becomes a stone marked 1.
-    The second stone, 1, is multiplied by 2024 to become 2024.
-    The third stone, 10, is split into a stone marked 1 followed by a stone marked 0.
-    The fourth stone, 99, is split into two stones marked 9.
-    The fifth stone, 999, is replaced by a stone marked 2021976.
+    La première pierre, 0, devient une pierre marquée 1.
+    La deuxième pierre, 1, est multiplié par 2024 pour devenir 2024.
+    La troisième pierre, 10, est scindée en une pierre marquée 1 suivie d'une pierre marquée 0.
+    La quatrième pierre, 99, est scindée en deux pierres marquées 9.
+    La cinquième pierre, 999, est remplacé par une pierre marquée 2021976.
 
-So, after blinking once, your five stones would become an arrangement of seven stones engraved with the numbers 1 2024 1 0 9 9 2021976.
+Donc, après avoir cligné une fois, vos cinq pierres deviendraient un arrangement de sept pierres gravées avec les nombres 1 2024 1 0 9 9 2021976.
 
-Here is a longer example:
+Voici un exemple plus long:
 
 Initial arrangement:
 125 17
@@ -52,24 +52,23 @@ After 5 blinks:
 After 6 blinks:
 2097446912 14168 4048 2 0 2 4 40 48 2024 40 48 80 96 2 8 6 7 6 0 3 2
 
-In this example, after blinking six times, you would have 22 stones. After blinking 25 times, you would have 55312 stones!
+Dans cet exemple, après avoir clignoté six fois, vous auriez 22 pierres. Après avoir cligné 25 fois, vous auriez 55312 Des pierres.
 
-Consider the arrangement of stones in front of you. How many stones will you have after blinking 25 times?
+Considérez l'agencement des pierres en face de vous. Combien de pierres aurez-vous après avoir clignoté 25 fois ?
 
-Your puzzle answer was 193269.
---- Part Two ---
+Votre réponse de puzzle a été 193269.
+--- Deuxième partie ---
 
-The Historians sure are taking a long time. To be fair, the infinite corridors are very large.
+Les historiens prennent certainement beaucoup de temps. Pour être justes, les couloirs infinis sont très grands.
 
-How many stones would you have after blinking a total of 75 times?
+Combien de pierres auriez-vous après avoir clignoté un total de 75 fois ?
 
-Your puzzle answer was 228449040027793.
+Votre réponse de puzzle a été 228449040027793.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
 
-At this point, you should return to your Advent calendar and try another puzzle.
+À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
 
-If you still want to see it, you can get your puzzle input.
+Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
 
-You can also [Shareon Bluesky Twitter Mastodon] this puzzle.
-
+Vous pouvez aussi [Partager sur Bluesky Twitter Mastodon, cette énigme.
