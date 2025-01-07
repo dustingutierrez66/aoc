@@ -1,52 +1,52 @@
 
---- Day 3: Mull It Over ---
+* --- Jour 3: Mll It Over ---
 
-"Our computers are having issues, so I have no idea if we have any Chief Historians in stock! You're welcome to check the warehouse, though," says the mildly flustered shopkeeper at the North Pole Toboggan Rental Shop. The Historians head out to take a look.
+"Nos ordinateurs ont des problèmes, donc je n'ai aucune idée si nous avons des Historiens en chef en stock. Vous êtes les bienvenus pour vérifier l'entrepôt », explique le commerçant légèrement bouillonné au magasin de location de toboggan du pôle Nord. Les historiens partent jeter un coup d'oeil.
 
-The shopkeeper turns to you. "Any chance you can see why our computers are having issues again?"
+Le commerçant se tourne vers vous. "Voute quand vous pouvez voir pourquoi nos ordinateurs ont à nouveau des problèmes ?"
 
-The computer appears to be trying to run a program, but its memory (your puzzle input) is corrupted. All of the instructions have been jumbled up!
+L'ordinateur semble essayer d'exécuter un programme, mais sa mémoire (votre entrée de casse-tête) est corrompue. Toutes les instructions ont été mélangées.
 
-It seems like the goal of the program is just to multiply some numbers. It does that with instructions like mul(X,Y), where X and Y are each 1-3 digit numbers. For instance, mul(44,46) multiplies 44 by 46 to get a result of 2024. Similarly, mul(123,4) would multiply 123 by 4.
+Il semble que l'objectif du programme soit juste de multiplier certains nombres. Il le fait avec des instructions comme mul(X,Y), où X et Y sont des nombres de 1 à 3 chiffres. Par exemple, mul(44,46) se multiplie 44 par 46 pour obtenir un résultat de 2024. De même, mul(123,4) multiplierait 123 par 4.
 
-However, because the program's memory has been corrupted, there are also many invalid characters that should be ignored, even if they look like part of a mul instruction. Sequences like mul(4*, mul(6,9!, ?(12,34), or mul ( 2 , 4 ) do nothing.
+Cependant, parce que la mémoire du programme a été corrompue, il y a aussi beaucoup de caractères invalides qui devraient être ignorés, même s'ils ressemblent à une partie d'un mul instruction. Des séquences comme mul(4*, mul(6,9!, ?(12,34), ou mul ( 2 , 4 ) do Rien.
 
-For example, consider the following section of corrupted memory:
+Par exemple, considérons la section suivante de mémoire corrompue:
 
 xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))
 
-Only the four highlighted sections are real mul instructions. Adding up the result of each instruction produces 161 (2*4 + 5*5 + 11*8 + 8*5).
+Seules les quatre sections en surbrillance sont réelles. mul instructions. L'ajout du résultat de chaque instruction produit 161 (2*4 + 5*5 + 11*8 + 8*5).
 
-Scan the corrupted memory for uncorrupted mul instructions. What do you get if you add up all of the results of the multiplications?
+Scanner la mémoire corrompue pour non corrompu mul instructions. Qu'obtenez-vous si vous additionnez tous les résultats des multiplications ?
 
-Your puzzle answer was 188741603.
---- Part Two ---
+Votre réponse de puzzle a été *188741603*.
+--- Deuxième partie ---
 
-As you scan through the corrupted memory, you notice that some of the conditional statements are also still intact. If you handle some of the uncorrupted conditional statements in the program, you might be able to get an even more accurate result.
+Au fur et à mesure que vous scannez la mémoire corrompue, vous remarquez que certaines des déclarations conditionnelles sont également encore intactes. Si vous gérez certaines des déclarations conditionnelles non corrompues du programme, vous pourriez être en mesure d'obtenir un résultat encore plus précis.
 
-There are two new instructions you'll need to handle:
+Il y a deux nouvelles instructions que vous devrez gérer:
 
-    The do() instruction enables future mul instructions.
-    The don't() instruction disables future mul instructions.
+    Le do() instruction permet avenir mul instructions.
+    Le don't() instruction invalides avenir mul instructions.
 
-Only the most recent do() or don't() instruction applies. At the beginning of the program, mul instructions are enabled.
+Uniquement le les plus récentes do() ou don't() L'instruction s'applique. Au début du programme, mul les instructions sont activé.
 
-For example:
+Par exemple:
 
 xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))
 
-This corrupted memory is similar to the example from before, but this time the mul(5,5) and mul(11,8) instructions are disabled because there is a don't() instruction before them. The other mul instructions function normally, including the one at the end that gets re-enabled by a do() instruction.
+Cette mémoire corrompue est similaire à l'exemple d'avant, mais cette fois mul(5,5) et mul(11,8) les instructions sont handicapés parce qu'il y a un don't() l'instruction qui les précède. L'autre mul fonction normale, y compris celle à la fin qui obtient re-activé par un do() instruction.
 
-This time, the sum of the results is 48 (2*4 + 8*5).
+Cette fois, la somme des résultats est 48 (2*4 + 8*5).
 
-Handle the new instructions; what do you get if you add up all of the results of just the enabled multiplications?
+Mandonner les nouvelles instructions; qu'obtenez-vous si vous additionnez tous les résultats des simples multiplications autorisées?
 
-Your puzzle answer was 67269798.
+Votre réponse de puzzle a été *67269798*.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
 
-At this point, you should return to your Advent calendar and try another puzzle.
+À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
 
-If you still want to see it, you can get your puzzle input.
+Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
 
-You can also [Shareon Bluesky Twitter Mastodon] this puzzle.
+Vous pouvez aussi [Partager sur Bluesky Twitter Mastodon, cette énigme.
