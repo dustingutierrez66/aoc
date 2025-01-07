@@ -1,5 +1,5 @@
 
---- Jour 11 : Plutoniens Pebbles ---
+* --- Jour 11 : Plutoniens Pebbles ---
 
 L'ancienne civilisation de Pluton était connue pour sa capacité à manipuler l'espace-temps, et tandis que les Historiens explorent leurs couloirs infinis, vous avez remarqué un étrange ensemble de pierres qui défient la physique.
 
@@ -56,19 +56,14 @@ Dans cet exemple, après avoir clignoté six fois, vous auriez 22 pierres. Aprè
 
 Considérez l'agencement des pierres en face de vous. Combien de pierres aurez-vous après avoir clignoté 25 fois ?
 
-Votre réponse de puzzle a été 193269.
+Votre réponse de puzzle a été *193269*.
+
 --- Deuxième partie ---
 
 Les historiens prennent certainement beaucoup de temps. Pour être justes, les couloirs infinis sont très grands.
 
 Combien de pierres auriez-vous après avoir clignoté un total de 75 fois ?
 
-Votre réponse de puzzle a été 228449040027793.
+Votre réponse de puzzle a été *228449040027793*.
 
-Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
-
-À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
-
-Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
-
-Vous pouvez aussi [Partager sur Bluesky Twitter Mastodon, cette énigme.
+Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or
