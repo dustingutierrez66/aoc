@@ -1,27 +1,26 @@
+* --- Jour 9 : Fragmenteur de disque ---
 
---- Day 9: Disk Fragmenter ---
+Une autre pression sur le bouton vous laisse dans les couloirs familiers de quelques amphipods amicaux. C'est une bonne chose que vous ayez chacun d'une manière ou d'une autre votre mini-sous-marin personnel. Les historiens s'enfuyent à la recherche du chef, principalement en poussant directement dans les murs.
 
-Another push of the button leaves you in the familiar hallways of some friendly amphipods! Good thing you each somehow got your own personal mini submarine. The Historians jet away in search of the Chief, mostly by driving directly into walls.
+Alors que les Historiens découvrent rapidement comment piloter ces choses, vous remarquez un amphipode dans le coin qui lutte avec son ordinateur. Il essaie de créer un espace libre plus contigu en compactant tous les fichiers, mais son programme ne fonctionne pas ; vous offrez de l'aide.
 
-While The Historians quickly figure out how to pilot these things, you notice an amphipod in the corner struggling with his computer. He's trying to make more contiguous free space by compacting all of the files, but his program isn't working; you offer to help.
-
-He shows you the disk map (your puzzle input) he's already generated. For example:
+Il vous montre la carte du disque (votre entrée de puzzle) qu'il a déjà générée. Par exemple:
 
 2333133121414131402
 
-The disk map uses a dense format to represent the layout of files and free space on the disk. The digits alternate between indicating the length of a file and the length of free space.
+La carte disque utilise un format dense pour représenter la présentation des fichiers et l'espace libre sur le disque. Les chiffres alternent entre l'indication de la longueur d'un fichier et la longueur de l'espace libre.
 
-So, a disk map like 12345 would represent a one-block file, two blocks of free space, a three-block file, four blocks of free space, and then a five-block file. A disk map like 90909 would represent three nine-block files in a row (with no free space between them).
+Donc, une carte de disque comme 12345 représenterait un fichier à un bloc, deux blocs d'espace libre, un fichier de trois blocs, quatre blocs d'espace libre, puis un fichier à cinq blocs. Une carte à disque comme 90909 représenterait trois fichiers à neuf blocs d'une ligne (sans espace libre entre eux).
 
-Each file on disk also has an ID number based on the order of the files as they appear before they are rearranged, starting with ID 0. So, the disk map 12345 has three files: a one-block file with ID 0, a three-block file with ID 1, and a five-block file with ID 2. Using one character for each block where digits are the file ID and . is free space, the disk map 12345 represents these individual blocks:
+Chaque fichier sur disque comporte également un Numéro d'identification sur la base de l'ordre des fichiers tel qu'ils apparaissent avant ils sont réorganisés, en commençant par ID 0. Donc, la carte du disque 12345 a trois fichiers: un fichier à un bloc avec ID 0, un fichier à trois blocs avec ID 1, et un fichier cinq blocs avec ID 2. En utilisant un caractère pour chaque bloc où les chiffres sont l'ID de fichier et . est libre de l'espace, la carte du disque 12345 représente ces blocs individuels:
 
 0..111....22222
 
-The first example above, 2333133121414131402, represents these individual blocks:
+Le premier exemple ci-dessus, 2333133121414131402, représente ces blocs individuels:
 
 00...111...2...333.44.5555.6666.777.888899
 
-The amphipod would like to move file blocks one at a time from the end of the disk to the leftmost free space block (until there are no gaps remaining between file blocks). For the disk map 12345, the process looks like this:
+L'amphipdéo souhaiterait déplacer les blocs de fichiers un à la fois de l'extrémité du disque au bloc d'espace libre le plus à gauche (jusqu'à ce qu'il n'y ait plus de discontinuités entre les blocs de fichiers). Pour la carte du disque 12345, le processus ressemble à ceci:
 
 0..111....22222
 02.111....2222.
@@ -30,7 +29,7 @@ The amphipod would like to move file blocks one at a time from the end of the di
 02211122..2....
 022111222......
 
-The first example requires a few more steps:
+Le premier exemple nécessite quelques étapes supplémentaires:
 
 00...111...2...333.44.5555.6666.777.888899
 009..111...2...333.44.5555.6666.777.88889.
@@ -46,22 +45,23 @@ The first example requires a few more steps:
 00998111888277733364465555.66.............
 0099811188827773336446555566..............
 
-The final step of this file-compacting process is to update the filesystem checksum. To calculate the checksum, add up the result of multiplying each of these blocks' position with the file ID number it contains. The leftmost block is in position 0. If a block contains free space, skip it instead.
+La dernière étape de ce processus de prise en compte du fichier consiste à mettre à jour le somme de contrôle de système de fichiers. Pour calculer la somme de contrôle, additionnez le résultat de la multiplication de la position de chacun de ces blocs avec le numéro d'identification du fichier qu'il contient. Le bloc le plus à gauche est en position 0. Si un bloc contient de l'espace libre, sautez-le à la place.
 
-Continuing the first example, the first few blocks' position multiplied by its file ID number are 0 * 0 = 0, 1 * 0 = 0, 2 * 9 = 18, 3 * 9 = 27, 4 * 8 = 32, and so on. In this example, the checksum is the sum of these, 1928.
+Poursuivant le premier exemple, la position des premiers blocs multipliée par son numéro d'identification de fichier sont 0 * 0 = 0, 1 * 0 = 0, 2 * 9 = 18, 3 * 9 = 27, 4 * 8 = 32, et ainsi de suite. Dans cet example, la somme des chèques est la somme de ceux-ci, 1928.
 
-Compact the amphipod's hard drive using the process he requested. What is the resulting filesystem checksum? (Be careful copy/pasting the input for this puzzle; it is a single, very long line.)
+Compacter le disque dur de l'amphipode en utilisant le processus qu'il a demandé. Qu'est-ce que la somme de contrôle du système de fichiers résultant? (Soyez soigne la copie/collage de l'entrée pour ce puzzle; c'est une ligne unique, très longue.)
 
-Your puzzle answer was 6283170117911.
---- Part Two ---
+Votre réponse de puzzle a été *6283170117911*.
 
-Upon completion, two things immediately become clear. First, the disk definitely has a lot more contiguous free space, just like the amphipod hoped. Second, the computer is running much more slowly! Maybe introducing all of that file system fragmentation was a bad idea?
+--- Deuxième partie ---
 
-The eager amphipod already has a new plan: rather than move individual blocks, he'd like to try compacting the files on his disk by moving whole files instead.
+À l'achèvement, deux choses deviennent immédiatement claires. Tout d'abord, le disque a certainement beaucoup plus d'espace libre contigu, tout comme l'amphipdé l'espérait. Deuxièmement, l'ordinateur fonctionne beaucoup plus lentement. Peut-être qu'introduire toute cette fragmentation du système de fichiers était une mauvaise idée ?
 
-This time, attempt to move whole files to the leftmost span of free space blocks that could fit the file. Attempt to move each file exactly once in order of decreasing file ID number starting with the file with the highest file ID number. If there is no span of free space to the left of a file that is large enough to fit the file, the file does not move.
+L'amphipode enthousiaste a déjà un nouveau plan : plutôt que de déplacer des blocs individuels, il aimerait essayer de compacter les fichiers sur son disque en bougeant des fichiers entiers à la place.
 
-The first example from above now proceeds differently:
+Cette fois, essayez de déplacer des fichiers entiers dans la plage la plus gauche de blocs d'espace libre qui pourraient s'adapter au fichier. Essayez de déplacer chaque fichier exactement une fois par ordre de nombre décroissant d'ID de fichier commençant avec le fichier avec le numéro d'identification de fichier le plus élevé. S'il n'y a pas d'espace libre à gauche d'un fichier suffisamment grand pour s'adapter au fichier, le fichier ne se déplace pas.
+
+Le premier exemple d'en haut se produit maintenant différemment:
 
 00...111...2...333.44.5555.6666.777.888899
 0099.111...2...333.44.5555.6666.777.8888..
@@ -69,17 +69,14 @@ The first example from above now proceeds differently:
 0099.111777244.333....5555.6666.....8888..
 00992111777.44.333....5555.6666.....8888..
 
-The process of updating the filesystem checksum is the same; now, this example's checksum would be 2858.
+Le processus de mise à jour de la somme de contrôle du système de fichiers est le même; maintenant, la somme de contrôle de cet exemple serait 2858.
 
-Start over, now compacting the amphipod's hard drive using this new method instead. What is the resulting filesystem checksum?
+Commencez, compactez maintenant le disque dur de l'amphipode en utilisant cette nouvelle méthode à la place. Qu'est-ce que la somme de contrôle du système de fichiers résultant?
 
-Your puzzle answer was 6307653242596.
+Votre réponse de puzzle a été *6307653242596*.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
 
-At this point, you should return to your Advent calendar and try another puzzle.
+À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
 
-If you still want to see it, you can get your puzzle input.
-
-You can also [Shareon Bluesky Twitter Mastodon] this puzzle.
-
+Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
