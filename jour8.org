@@ -1,11 +1,10 @@
+* --- Jour 8: Collinarité résonnante ---
 
---- Day 8: Resonant Collinearity ---
+Vous vous retrouvez sur le toit d'une installation de lapin de Pâques haut àcresses.
 
-You find yourselves on the roof of a top-secret Easter Bunny installation.
+Alors que les Historiens font leur truc, vous regardez l'énorme antenne familière. À votre grande surprise, il semble avoir été reconfiguré pour émettre un signal qui rend les gens 0,1 % plus susceptibles d'acheter Easter Bunny marque Imitation Mediocre Chocolate en cadeau de Noel. Impoissant.
 
-While The Historians do their thing, you take a look at the familiar huge antenna. Much to your surprise, it seems to have been reconfigured to emit a signal that makes people 0.1% more likely to buy Easter Bunny brand Imitation Mediocre Chocolate as a Christmas gift! Unthinkable!
-
-Scanning across the city, you find that there are actually many such antennas. Each antenna is tuned to a specific frequency indicated by a single lowercase letter, uppercase letter, or digit. You create a map (your puzzle input) of these antennas. For example:
+En scannant à travers la ville, vous trouvez qu'il y a en fait beaucoup de ces antennes. Chaque antenne est réglée sur une fréquence spécifique indiquée par une seule lettre minuscule, une lettre majuscule ou un chiffre. Vous créez une carte (votre jeu d'interventions de puzzle) de ces antennes. Par exemple:
 
 ............
 ........0...
@@ -20,9 +19,9 @@ Scanning across the city, you find that there are actually many such antennas. E
 ............
 ............
 
-The signal only applies its nefarious effect at specific antinodes based on the resonant frequencies of the antennas. In particular, an antinode occurs at any point that is perfectly in line with two antennas of the same frequency - but only when one of the antennas is twice as far away as the other. This means that for any pair of antennas with the same frequency, there are two antinodes, one on either side of them.
+Le signal n'applique que son effet néfaste à des anti-noeuds spécifiques en fonction des fréquences de résonance des antennes. En particulier, un anti-noeud se produit en tout point qui est parfaitement conforme à deux antennes de la même fréquence - mais seulement lorsque l'une des antennes est deux fois plus loin que l'autre. Cela signifie que pour toute paire d'antennes de même fréquence, il y a deux anti-noeuds, un de part et d'autre d'entre eux.
 
-So, for these two antennas with frequency a, they create the two antinodes marked with #:
+Donc, pour ces deux antennes avec fréquence a, ils créent les deux antinodes marqués avec #:
 
 ..........
 ...#......
@@ -35,7 +34,7 @@ So, for these two antennas with frequency a, they create the two antinodes marke
 ..........
 ..........
 
-Adding a third antenna with the same frequency creates several more antinodes. It would ideally add four antinodes, but two are off the right side of the map, so instead it adds only two:
+L'ajout d'une troisième antenne de même fréquence crée plusieurs anti-noeuds supplémentaires. Il ajouterait idéalement quatre anti-noeuds, mais deux sont du côté droit de la carte, donc à la place il n'en ajoute que deux:
 
 ..........
 ...#......
@@ -48,7 +47,7 @@ Adding a third antenna with the same frequency creates several more antinodes. I
 ..........
 ..........
 
-Antennas with different frequencies don't create antinodes; A and a count as different frequencies. However, antinodes can occur at locations that contain antennas. In this diagram, the lone antenna with frequency capital A creates no antinodes but has a lowercase-a-frequency antinode at its location:
+Les antennes avec des fréquences différentes ne créent pas d'antinodes; A et a compter comme fréquences différentes. Cependant, les anti-noeuds peuvent se produisent à des endroits qui contiennent des antennes. Dans ce diagramme, l'antenne solitaire à capital de fréquence A ne crée pas d'antinodes mais a un minusculea- l'antinode de fréquence à son emplacement:
 
 ..........
 ...#......
@@ -61,7 +60,7 @@ Antennas with different frequencies don't create antinodes; A and a count as dif
 ..........
 ..........
 
-The first example has antennas with two different frequencies, so the antinodes they create look like this, plus an antinode overlapping the topmost A-frequency antenna:
+Le premier exemple a des antennes avec deux fréquences différentes, donc les anti-noeuds qu'ils créent ressemblent à ça, plus un antinoeud chevauchant le top le plus haut A- antenne de fréquence:
 
 ......#....#
 ...#....0...
@@ -76,20 +75,21 @@ The first example has antennas with two different frequencies, so the antinodes 
 ..........#.
 ..........#.
 
-Because the topmost A-frequency antenna overlaps with a 0-frequency antinode, there are 14 total unique locations that contain an antinode within the bounds of the map.
+Parce que le plus haut A- l'antenne de fréquence se chevauche avec a 0- l'antinode de fréquence, il y a 14 des emplacements uniques qui contiennent un antinoeud dans les limites de la carte.
 
-Calculate the impact of the signal. How many unique locations within the bounds of the map contain an antinode?
+Calculer l'impact du signal. Combien d'emplacements uniques dans les limites de la carte contiennent un antinoeud ?
 
-Your puzzle answer was 240.
---- Part Two ---
+Votre réponse de puzzle a été *240*.
 
-Watching over your shoulder as you work, one of The Historians asks if you took the effects of resonant harmonics into your calculations.
+--- Deuxième partie ---
 
-Whoops!
+Surveillant votre épaule pendant que vous travaillez, l'un des Historiens demande si vous avez pris les effets des harmoniques résonantes dans vos calculs.
 
-After updating your model, it turns out that an antinode occurs at any grid position exactly in line with at least two antennas of the same frequency, regardless of distance. This means that some of the new antinodes will occur at the position of each antenna (unless that antenna is the only one of its frequency).
+C'est à toi.
 
-So, these three T-frequency antennas now create many antinodes:
+Après la mise à jour de votre modèle, il s'avère qu'un antipne se produit à n'importe quelle position de grille exactement alignée avec au moins deux antennes de la même fréquence, quelle que soit la distance. Cela signifie que certains des nouveaux antinoes se produiront à l'endroit de chaque antenne (à moins que l'antenne soit la seule de sa fréquence).
+
+Donc, ces trois T- les antennes de fréquence créent maintenant de nombreux antinoeuds:
 
 T....#....
 ...T......
@@ -102,9 +102,9 @@ T....#....
 ....#.....
 ..........
 
-In fact, the three T-frequency antennas are all exactly in line with two antennas, so they are all also antinodes! This brings the total number of antinodes in the above example to 9.
+En fait, les trois T- les antennes de fréquence sont toutes exactement conformes à deux antennes, donc elles sont toutes également anti-noeuds. Ceci apporte le nombre total d'antinodes dans l'exemple ci-dessus à 9.
 
-The original example now has 34 antinodes, including the antinodes that appear on every antenna:
+L'exemple original a maintenant 34 antinoeuds, y compris les antinodes qui apparaissent sur chaque antenne:
 
 ##....#....#
 .#.#....0...
@@ -119,15 +119,12 @@ The original example now has 34 antinodes, including the antinodes that appear o
 .#........#.
 ...#......##
 
-Calculate the impact of the signal using this updated model. How many unique locations within the bounds of the map contain an antinode?
+Calculer l'impact du signal à l'aide de ce modèle mis à jour. Combien d'emplacements uniques dans les limites de la carte contiennent un antinoeud ?
 
-Your puzzle answer was 955.
+Votre réponse de puzzle a été *955*.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
 
-At this point, you should return to your Advent calendar and try another puzzle.
+À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
 
-If you still want to see it, you can get your puzzle input.
-
-You can also [Shareon Bluesky Twitter Mastodon] this puzzle.
-
+Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
