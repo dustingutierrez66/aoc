@@ -1,11 +1,11 @@
 
---- Day 4: Ceres Search ---
+* --- Jour 4: Ceres Search ---
 
-"Looks like the Chief's not here. Next!" One of The Historians pulls out a device and pushes the only button on it. After a brief flash, you recognize the interior of the Ceres monitoring station!
+"On dirait que le chef n'est pas là. Prochainement. » L'un des Historiens tire un appareil et pousse le seul bouton. Après un bref flash, vous reconnaissez l'intérieur de la station de surveillance de Ceres.
 
-As the search for the Chief continues, a small Elf who lives on the station tugs on your shirt; she'd like to know if you could help her with her word search (your puzzle input). She only has to find one word: XMAS.
+Alors que la recherche du chef continue, un petit Elfe qui vit sur la gare remorque votre chemise; elle aimerait savoir si vous pourriez l'aider avec elle recherche de mots (votre saisie d'énigmes). Elle n'a qu'à trouver un mot : XMAS.
 
-This word search allows words to be horizontal, vertical, diagonal, written backwards, or even overlapping other words. It's a little unusual, though, as you don't merely need to find one instance of XMAS - you need to find all of them. Here are a few ways XMAS might appear, where irrelevant characters have been replaced with .:
+Cette recherche de mots permet aux mots d'être horizontal, vertical, diagonal, écrit en arrière, ou même d'autres mots qui se chevauchent. C'est un peu inhabituel, cependant, car vous n'avez pas seulement besoin de trouver un exemple de XMAS - vous devez trouver tous. Voici quelques façons XMAS peuvent apparaître, lorsque des caractères non pertinents ont été remplacés par .:
 
 ..X...
 .SAMX.
@@ -13,7 +13,7 @@ This word search allows words to be horizontal, vertical, diagonal, written back
 XMAS.S
 .X....
 
-The actual word search will be full of letters instead. For example:
+La recherche de mots sera plutôt remplie de lettres. Par exemple:
 
 MMMSXXMASM
 MSAMXMSMSA
@@ -26,7 +26,7 @@ SAXAMASAAA
 MAMMMXMMMM
 MXMXAXMASX
 
-In this word search, XMAS occurs a total of 18 times; here's the same word search again, but where letters not involved in any XMAS have been replaced with .:
+Dans cette recherche de mots, XMAS se produit un total de 18 fois; voici la même recherche de mots à nouveau, mais où les lettres n'impliquent aucune XMAS ont été remplacées par .:
 
 ....XXMAS.
 .SAMXMS...
@@ -39,22 +39,22 @@ S.S.S.S.SS
 ..M.M.M.MM
 .X.X.XMASX
 
-Take a look at the little Elf's word search. How many times does XMAS appear?
+Regardez la recherche de mots du petit Elf. Combien de fois fait-il XMASapparait-il?
 
-Your puzzle answer was 2530.
---- Part Two ---
+Votre réponse de puzzle a été *2530*.
+--- Deuxième partie ---
 
-The Elf looks quizzically at you. Did you misunderstand the assignment?
+L'Elfe vous regarde par bizarrement. As-tu mal compris la mission ?
 
-Looking for the instructions, you flip over the word search to find that this isn't actually an XMAS puzzle; it's an X-MAS puzzle in which you're supposed to find two MAS in the shape of an X. One way to achieve that is like this:
+À la recherche des instructions, vous retournez la recherche de mot pour trouver que ce n'est pas vraiment un XMAS puzzle, c'est un X-MAS puzzle dans lequel vous êtes censé trouver deux MAS en forme de X. Une façon d'y parvenir est la suivante :
 
 M.S
 .A.
 M.S
 
-Irrelevant characters have again been replaced with . in the above diagram. Within the X, each MAS can be written forwards or backwards.
+Les caractères non pertinents ont de nouveau été remplacés par . dans le schéma ci-dessus. Dans le cadre de la X, chacun MAS peuvent être écrites en avant ou en arrière.
 
-Here's the same example from before, but this time all of the X-MASes have been kept instead:
+Voici le même exemple d'avant, mais ce temps-là tout le X-MASLes pays ont été conservés à la place:
 
 .M.S......
 ..A..MSMS.
@@ -67,17 +67,16 @@ S.S.S.S.S.
 M.M.M.M.M.
 ..........
 
-In this example, an X-MAS appears 9 times.
+Dans cet exemple, un X-MAS apparaît 9 fois.
 
-Flip the word search from the instructions back over to the word search side and try again. How many times does an X-MAS appear?
+Retournez le mot à partir des instructions à la partie suivante de la recherche de mots et essayez à nouveau. Combien de fois fait-il un X-MASapparait-il?
 
-Your puzzle answer was 1921.
+Votre réponse de puzzle a été *1921*.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Les deux parties de ce puzzle sont terminées. Ils fournissent deux étoiles d'or:
 
-At this point, you should return to your Advent calendar and try another puzzle.
+À ce stade, vous devriez revenir à votre calendrier de l'Avent et essayer un autre puzzle.
 
-If you still want to see it, you can get your puzzle input.
+Si vous voulez toujours le voir, vous pouvez obtenir votre entrée de puzzle.
 
-You can also [Shareon Bluesky Twitter Mastodon] this puzzle.
-
+Vous pouvez aussi [Partager sur Bluesky Twitter Mastodon, cette énigme.
