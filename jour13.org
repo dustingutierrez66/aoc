@@ -12,6 +12,7 @@ Chaque machine en contient une Prix; pour remporter le prix, la griffe doit êtr
 
 Vous vous demandez : quel est le plus petit nombre de jetons que vous auriez à dépenser pour gagner autant de prix que possible ? Vous assemblez une liste du comportement du bouton de chaque machine et de l'emplacement du prix (votre entrée de puzzle). Par exemple:
 
+#Begin_exemple
 Button A: X+94, Y+34
 Button B: X+22, Y+67
 Prize: X=8400, Y=5400
@@ -27,6 +28,7 @@ Prize: X=7870, Y=6450
 Button A: X+69, Y+23
 Button B: X+27, Y+71
 Prize: X=18641, Y=10279
+#End_exemple
 
 Cette liste décrit la configuration des boutons et l'emplacement du prix de quatre machines à griffes différentes.
 
